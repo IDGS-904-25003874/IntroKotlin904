@@ -97,7 +97,6 @@ class CinepolisActivity : AppCompatActivity() {
             if (!validarCampos()) {
                 return
             }
-            val nombre = editTextNombre.text.toString().trim()
             val cantidadCompradores = editTextCantidad.text.toString().toInt()
             val cantidadBoletos = editTextBoletos.text.toString().toInt()
             val tieneTarjetaCineco = radioSi.isChecked

@@ -12,13 +12,15 @@
         android:theme="@style/Theme.IntroKotlin"
         tools:targetApi="31">
         <activity
-            android:name=".tema1App.Ejemplo2Activity"
-            android:exported="false" />
+            android:name=".Tem2App.ResultadoActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".tema1App.Ejemplo1Activity"
-            android:exported="false" />
+            android:name=".Tem2App.Ejemplo2Activity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
-            android:name="Cinepolis.CinepolisActivity"
+            android:name=".MenuActivity"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -28,15 +30,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".tema1App.Ejemplo2Activity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".tema1App.Ejemplo1Activity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="Cinepolis.CinepolisActivity"
             android:exported="true"
-            android:theme="@style/Theme.IntroKotlin">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
