@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.introkotlin.Tem2App.Ejemplo2Activity
+import com.example.introkotlin.Tema3.Ejemplo3Activity
+import com.example.introkotlin.Tema4.Ejemplo4Activity
 import com.example.introkotlin.tema1App.Ejemplo1Activity
 
 class MenuActivity : AppCompatActivity() {
@@ -25,6 +27,12 @@ class MenuActivity : AppCompatActivity() {
 
         val btnEjemplo2 = findViewById<Button>(R.id.button3)
         btnEjemplo2.setOnClickListener{navigateToEjemplo2()}
+
+        val btnNumero = findViewById<Button>(R.id.button4)
+        btnNumero.setOnClickListener{navigateToEjemplo3()}
+
+        val btnArchivo = findViewById<Button>(R.id.button5)
+        btnArchivo.setOnClickListener{navigateToEjemplo4()}
 
 
 
@@ -49,4 +57,15 @@ class MenuActivity : AppCompatActivity() {
         val intent = Intent(this, Ejemplo2Activity::class.java)
         startActivity(intent)
     }
+
+    private fun navigateToEjemplo3() {
+        val intent = Intent(this, Ejemplo3Activity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToEjemplo4() {
+        val intent = Intent(this, Ejemplo4Activity::class.java)
+        startActivity(intent)
+    }
+
 }

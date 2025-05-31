@@ -1,38 +1,41 @@
-package com.example.introkotlin.Tem2App
+package com.example.introkotlin.Diccionario
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.introkotlin.R
+import com.example.introkotlin.tema1App.Ejemplo1Activity
 
-class Ejemplo2Activity : AppCompatActivity() {
+class MenuDiccionarioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_ejemplo3)
+        setContentView(R.layout.activity_menu_diccionario)
 
-        val btnStart = findViewById<Button>(R.id.btnStart)
-        val edtName = findViewById<EditText>(R.id.edtName)
+        val btnCap = findViewById<Button>(R.id.btnCap)
+        btnCap.setOnClickListener{navigateToCapturar()}
 
-        btnStart.setOnClickListener{
-            val name = edtName.text.toString()
-            val intent = Intent(this, ResultadoActivity::class.java)
-            intent.putExtra("name", name)
-            startActivity(intent)
-        }
+        val btnBuscar = findViewById<Button>(R.id.btnBuscar)
+        btnBuscar.setOnClickListener{navigateToBuscar()}
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
 
+    fun navigateToCapturar(){
+        val intent = Intent(this, CapturarActivity::class.java)
+        startActivity(intent)
+    }
 
-
+    fun navigateToBuscar(){
+        val intent = Intent(this, BuscarActivity::class.java)
+        startActivity(intent)
     }
 }
